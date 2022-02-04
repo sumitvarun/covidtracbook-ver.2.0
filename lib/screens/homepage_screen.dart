@@ -1,6 +1,10 @@
+import 'dart:convert';
+
+import 'package:covidtracbook/panels/worldwidepanel.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:http/http.dart' as http;
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -10,6 +14,21 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  late Map worldData;
+  fetchWorldWideData() async {
+    http.Response response =
+        await http.get(Uri.parse('https://disease.sh/v3/covid-19/all'));
+    setState(() {
+      worldData = json.decode(response.body);
+    });
+  }
+
+  @override
+  void initState() {
+    fetchWorldWideData();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -35,61 +54,9 @@ class _HomePageState extends State<HomePage> {
           body: SafeArea(
             child: Center(
               child: Column(
-                children: <Widget>[
-                  Row(
-                    children: <Widget>[
-                      Expanded(
-                        child: Container(
-                          margin: EdgeInsets.all(5.0),
-                          height: 100.0,
-                          decoration: const BoxDecoration(color: Colors.red),
-                        ),
-                      ),
-                      Expanded(
-                        child: Container(
-                          margin: EdgeInsets.all(5.0),
-                          height: 100.0,
-                          decoration: const BoxDecoration(color: Colors.blue),
-                        ),
-                      ),
-                    ],
-                  ),
-                  Row(
-                    children: <Widget>[
-                      Expanded(
-                        child: Container(
-                          margin: EdgeInsets.all(5.0),
-                          height: 100.0,
-                          decoration: const BoxDecoration(color: Colors.green),
-                        ),
-                      ),
-                      Expanded(
-                        child: Container(
-                          margin: EdgeInsets.all(5.0),
-                          height: 100.0,
-                          decoration:
-                              const BoxDecoration(color: Colors.deepOrange),
-                        ),
-                      ),
-                    ],
-                  ),
-                  Row(
-                    children: <Widget>[
-                      Expanded(
-                        child: Container(
-                          margin: EdgeInsets.all(5.0),
-                          height: 100.0,
-                          decoration: const BoxDecoration(color: Colors.yellow),
-                        ),
-                      ),
-                      Expanded(
-                        child: Container(
-                          margin: EdgeInsets.all(5.0),
-                          height: 100.0,
-                          decoration: const BoxDecoration(color: Colors.indigo),
-                        ),
-                      ),
-                    ],
+                children: const <Widget>[
+                  WorldWidePanel(
+                    worldData: {},
                   )
                 ],
               ),
