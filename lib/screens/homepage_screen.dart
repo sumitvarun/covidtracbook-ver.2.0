@@ -23,10 +23,25 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
+  late List countryData;
+  fetchCountryData() async {
+    http.Response response = await http
+        .get(Uri.parse('https://corona.lmao.ninja/v2/countries?sort=cases'));
+    setState(() {
+      countryData = json.decode(response.body);
+    });
+  }
+
   @override
   void initState() {
     fetchWorldWideData();
     super.initState();
+  }
+
+  Future fetchData() async {
+    fetchWorldWideData();
+    fetchCountryData();
+    print('fetchData called');
   }
 
   @override
@@ -55,9 +70,10 @@ class _HomePageState extends State<HomePage> {
             child: Center(
               child: Column(
                 children: const <Widget>[
-                  WorldWidePanel(
-                    worldData: {},
-                  )
+                  Text(
+                    'Worldwide',
+                    style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+                  ),
                 ],
               ),
             ),
