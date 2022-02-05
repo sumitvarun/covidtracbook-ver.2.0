@@ -56,11 +56,14 @@ class _HomePageState extends State<HomePage> {
           headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
             return <Widget>[
               CupertinoSliverNavigationBar(
-                backgroundColor: Colors.transparent,
+                backgroundColor: Colors.white,
                 largeTitle: Text(
                   'COVIDTRACBOOK',
-                  style: GoogleFonts.exo2(
-                      color: Colors.black, fontWeight: FontWeight.normal),
+                  style: GoogleFonts.pacifico(
+                    color: Colors.black,
+                    fontWeight: FontWeight.w200,
+                    fontSize: 18.0,
+                  ),
                 ),
                 //middle: Text(
                 // ' A Covid19 Tracker Application',
