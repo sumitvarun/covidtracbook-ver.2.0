@@ -91,8 +91,8 @@ class StatusPanel extends StatelessWidget {
     // double width = MediaQuery.of(context).size.width;
 
     return Container(
-      margin: const EdgeInsets.all(10),
-      height: 50,
+      margin: const EdgeInsets.all(20),
+      height: 40,
       //  width: width / 2,
       //color: panelColor,
       decoration: BoxDecoration(
