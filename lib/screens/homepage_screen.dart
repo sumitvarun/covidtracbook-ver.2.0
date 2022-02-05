@@ -69,11 +69,8 @@ class _HomePageState extends State<HomePage> {
           body: SafeArea(
             child: Center(
               child: Column(
-                children: const <Widget>[
-                  Text(
-                    'Worldwide',
-                    style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
-                  ),
+                children: <Widget>[
+                  WorldWidePanel(widget, worldData: worldData)
                 ],
               ),
             ),

@@ -40,7 +40,7 @@ class WorldWidePanel extends StatelessWidget {
             ),
             Expanded(
               child: StatusPanel(
-                count: worldData['countries'].toString(),
+                count: worldData['affectedCountries'].toString(),
                 panelColor: const Color(0xffF76E11),
                 textColor: const Color(0xffFBF8F1),
                 title: 'Countries',
