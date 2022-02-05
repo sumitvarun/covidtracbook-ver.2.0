@@ -13,7 +13,7 @@ class WorldWidePanel extends StatelessWidget {
             Expanded(
               child: StatusPanel(
                 count: worldData['cases'].toString(),
-                panelColor: const Color(0xffF76E11),
+                //    panelColor: const Color(0xff161853),
                 textColor: const Color(0xffFBF8F1),
                 title: 'Confirmed',
               ),
@@ -21,7 +21,7 @@ class WorldWidePanel extends StatelessWidget {
             Expanded(
               child: StatusPanel(
                 count: worldData['active'].toString(),
-                panelColor: const Color(0xffF76E11),
+                //    panelColor: const Color(0xff161853),
                 textColor: const Color(0xffFBF8F1),
                 title: 'Active',
               ),
@@ -33,7 +33,7 @@ class WorldWidePanel extends StatelessWidget {
             Expanded(
               child: StatusPanel(
                 count: worldData['recovered'].toString(),
-                panelColor: const Color(0xffF76E11),
+                //  panelColor: const Color(0xff161853),
                 textColor: const Color(0xffFBF8F1),
                 title: 'Recovered',
               ),
@@ -41,7 +41,7 @@ class WorldWidePanel extends StatelessWidget {
             Expanded(
               child: StatusPanel(
                 count: worldData['affectedCountries'].toString(),
-                panelColor: const Color(0xffF76E11),
+                //  panelColor: const Color(0xff161853),
                 textColor: const Color(0xffFBF8F1),
                 title: 'Countries',
               ),
@@ -53,7 +53,7 @@ class WorldWidePanel extends StatelessWidget {
             Expanded(
               child: StatusPanel(
                 count: worldData['tests'].toString(),
-                panelColor: const Color(0xffF76E11),
+                //  panelColor: const Color(0xff161853),
                 textColor: const Color(0xffFBF8F1),
                 title: 'Tests',
               ),
@@ -61,7 +61,7 @@ class WorldWidePanel extends StatelessWidget {
             Expanded(
               child: StatusPanel(
                 count: worldData['deaths'].toString(),
-                panelColor: const Color(0xffF76E11),
+                // panelColor: const Color(0xff161853),
                 textColor: const Color(0xffFBF8F1),
                 title: 'Deaths',
               ),
@@ -74,14 +74,13 @@ class WorldWidePanel extends StatelessWidget {
 }
 
 class StatusPanel extends StatelessWidget {
-  final Color panelColor;
+  //final Color panelColor;
   final Color textColor;
   final String title;
   final String count;
-
   const StatusPanel(
       {Key? key,
-      required this.panelColor,
+      // required this.panelColor,
       required this.textColor,
       required this.title,
       required this.count})
@@ -89,13 +88,16 @@ class StatusPanel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double width = MediaQuery.of(context).size.width;
+    // double width = MediaQuery.of(context).size.width;
 
     return Container(
-      margin: EdgeInsets.all(10),
-      height: 80,
-      width: width / 2,
-      color: panelColor,
+      margin: const EdgeInsets.all(10),
+      height: 50,
+      //  width: width / 2,
+      //color: panelColor,
+      decoration: BoxDecoration(
+          color: const Color(0xff161853),
+          borderRadius: BorderRadius.circular(15.0)),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
