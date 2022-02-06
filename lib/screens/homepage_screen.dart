@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:covidtracbook/panels/mostaffectedpanel.dart';
 import 'package:covidtracbook/panels/worldwidepanel.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
@@ -36,15 +37,15 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     fetchWorldWideData();
+    fetchData();
     super.initState();
   }
 
   Future fetchData() async {
     fetchWorldWideData();
     fetchCountryData();
-    if (kDebugMode) {
-      print('fetchData called');
-    }
+    // ignore: avoid_print
+    print('fetchData called');
   }
 
   @override
@@ -53,35 +54,65 @@ class _HomePageState extends State<HomePage> {
       title: 'COVIDTRACBOOK',
       home: CupertinoPageScaffold(
         child: NestedScrollView(
-          headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
-            return <Widget>[
-              CupertinoSliverNavigationBar(
-                backgroundColor: Colors.white,
-                largeTitle: Text(
-                  'COVIDTRACBOOK',
-                  style: GoogleFonts.pacifico(
-                    color: Colors.black,
-                    fontWeight: FontWeight.w200,
-                    fontSize: 18.0,
+            headerSliverBuilder:
+                (BuildContext context, bool innerBoxIsScrolled) {
+              return <Widget>[
+                CupertinoSliverNavigationBar(
+                  backgroundColor: Colors.white,
+                  largeTitle: Text(
+                    'COVIDTRACBOOK',
+                    style: GoogleFonts.pacifico(
+                      color: Colors.black,
+                      fontWeight: FontWeight.w200,
+                      fontSize: 18.0,
+                    ),
+                  ),
+                  //middle: Text(
+                  // ' A Covid19 Tracker Application',
+                  //style: GoogleFonts.exo2(color: Colors.black),
+                  // ),
+                )
+              ];
+            },
+            body: SafeArea(
+              child: RefreshIndicator(
+                onRefresh: fetchData,
+                child: SingleChildScrollView(
+                  child: Center(
+                    child: Column(
+                      children: <Widget>[
+                        Text(
+                          'WORLDWIDE',
+                          style: GoogleFonts.exo(
+                            color: Colors.black,
+                            fontWeight: FontWeight.w200,
+                            fontSize: 18.0,
+                          ),
+                        ),
+                        // ignore: unnecessary_null_comparison
+                        worldData == null
+                            ? const CircularProgressIndicator()
+                            : WorldWidePanel(widget, worldData: worldData),
+
+                        Text(
+                          'Most Affected Countries',
+                          style: GoogleFonts.exo(
+                            color: Colors.black,
+                            fontWeight: FontWeight.w200,
+                            fontSize: 18.0,
+                          ),
+                        ),
+
+                        // ignore: unnecessary_null_comparison
+                        countryData == null
+                            ? Container()
+                            : MostAffectedPanel(countryData: countryData)
+                      ],
+                    ),
                   ),
                 ),
-                //middle: Text(
-                // ' A Covid19 Tracker Application',
-                //style: GoogleFonts.exo2(color: Colors.black),
-                // ),
-              )
-            ];
-          },
-          body: SafeArea(
-            child: Center(
-              child: Column(
-                children: <Widget>[
-                  WorldWidePanel(widget, worldData: worldData)
-                ],
               ),
-            ),
-          ),
-        ),
+            )),
       ),
     );
   }
