@@ -74,40 +74,42 @@ class _HomePageState extends State<HomePage> {
                 )
               ];
             },
-            body: SafeArea(
-              child: RefreshIndicator(
-                onRefresh: fetchData,
-                child: SingleChildScrollView(
-                  child: Center(
-                    child: Column(
-                      children: <Widget>[
-                        Text(
-                          'WORLDWIDE',
-                          style: GoogleFonts.exo(
-                            color: Colors.black,
-                            fontWeight: FontWeight.w200,
-                            fontSize: 18.0,
+            body: Material(
+              child: SafeArea(
+                child: RefreshIndicator(
+                  onRefresh: fetchData,
+                  child: SingleChildScrollView(
+                    child: Center(
+                      child: Column(
+                        children: <Widget>[
+                          Text(
+                            'WORLDWIDE',
+                            style: GoogleFonts.exo(
+                              color: Colors.black,
+                              fontWeight: FontWeight.w200,
+                              fontSize: 18.0,
+                            ),
                           ),
-                        ),
-                        // ignore: unnecessary_null_comparison
-                        worldData == null
-                            ? const CircularProgressIndicator()
-                            : WorldWidePanel(widget, worldData: worldData),
+                          // ignore: unnecessary_null_comparison
+                          worldData == null
+                              ? const CircularProgressIndicator()
+                              : WorldWidePanel(widget, worldData: worldData),
 
-                        Text(
-                          'Most Affected Countries',
-                          style: GoogleFonts.exo(
-                            color: Colors.black,
-                            fontWeight: FontWeight.w200,
-                            fontSize: 18.0,
+                          Text(
+                            'Most Affected Countries',
+                            style: GoogleFonts.exo(
+                              color: Colors.black,
+                              fontWeight: FontWeight.w200,
+                              fontSize: 18.0,
+                            ),
                           ),
-                        ),
 
-                        // ignore: unnecessary_null_comparison
-                        countryData == null
-                            ? Container()
-                            : MostAffectedPanel(countryData: countryData)
-                      ],
+                          // ignore: unnecessary_null_comparison
+                          countryData == null
+                              ? Container()
+                              : MostAffectedPanel(countryData: countryData)
+                        ],
+                      ),
                     ),
                   ),
                 ),
