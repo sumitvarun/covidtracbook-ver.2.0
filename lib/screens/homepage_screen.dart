@@ -1,5 +1,7 @@
 import 'dart:convert';
 
+import 'package:covidtracbook/panels/country.dart';
+import 'package:covidtracbook/panels/helpbook.dart';
 import 'package:covidtracbook/panels/mostaffectedpanel.dart';
 import 'package:covidtracbook/panels/worldwidepanel.dart';
 import 'package:flutter/cupertino.dart';
@@ -109,7 +111,30 @@ class _HomePageState extends State<HomePage> {
                           // ignore: unnecessary_null_comparison
                           countryData == null
                               ? Container()
-                              : MostAffectedPanel(countryData: countryData)
+                              : MostAffectedPanel(countryData: countryData),
+                          TextButton.icon(
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        const questionAnswer()),
+                              );
+                            },
+                            icon: const Icon(Icons.coronavirus_outlined),
+                            label: const Text('Helpbook'),
+                          ),
+                          TextButton.icon(
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const CountryPage()),
+                              );
+                            },
+                            icon: const Icon(Icons.coronavirus_outlined),
+                            label: const Text('Regional'),
+                          ),
                         ],
                       ),
                     ),
