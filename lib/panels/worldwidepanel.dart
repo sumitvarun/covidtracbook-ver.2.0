@@ -16,16 +16,16 @@ class WorldWidePanel extends StatelessWidget {
                   child: StatusPanel(
                     count: worldData['cases'].toString(),
                     //    panelColor: const Color(0xff161853),
-                    textColor: const Color(0xff0C1E7F),
-                    title: 'Confirmed', counttextcolor: Color(0xffF76E11),
+                    textColor: const Color(0xff2A6171),
+                    title: 'Confirmed', counttextcolor: Color(0xffFF1700),
                   ),
                 ),
                 Expanded(
                   child: StatusPanel(
                     count: worldData['active'].toString(),
                     //    panelColor: const Color(0xff161853),
-                    textColor: const Color(0xff0C1E7F),
-                    title: 'Active', counttextcolor: Color(0xffF76E11),
+                    textColor: const Color(0xff2A6171),
+                    title: 'Active', counttextcolor: Color(0xffF34573),
                   ),
                 ),
               ],
@@ -36,16 +36,16 @@ class WorldWidePanel extends StatelessWidget {
                   child: StatusPanel(
                     count: worldData['recovered'].toString(),
                     //  panelColor: const Color(0xff161853),
-                    textColor: const Color(0xff0C1E7F),
-                    title: 'Recovered', counttextcolor: Color(0xffF76E11),
+                    textColor: const Color(0xff2A6171),
+                    title: 'Recovered', counttextcolor: Color(0xff125C13),
                   ),
                 ),
                 Expanded(
                   child: StatusPanel(
                     count: worldData['affectedCountries'].toString(),
                     //  panelColor: const Color(0xff161853),
-                    textColor: const Color(0xff0C1E7F),
-                    title: 'Countries', counttextcolor: Color(0xffF76E11),
+                    textColor: const Color(0xff2A6171),
+                    title: 'Countries', counttextcolor: Color(0xffF34573),
                   ),
                 ),
               ],
@@ -56,16 +56,16 @@ class WorldWidePanel extends StatelessWidget {
                   child: StatusPanel(
                     count: worldData['tests'].toString(),
                     //  panelColor: const Color(0xff161853),
-                    textColor: const Color(0xff0C1E7F),
-                    title: 'Tests', counttextcolor: Color(0xffF76E11),
+                    textColor: const Color(0xff2A6171),
+                    title: 'Tests', counttextcolor: Color(0xffF34573),
                   ),
                 ),
                 Expanded(
                   child: StatusPanel(
                     count: worldData['deaths'].toString(),
                     // panelColor: const Color(0xff161853),
-                    textColor: const Color(0xff0C1E7F),
-                    title: 'Deaths', counttextcolor: Color(0xffF76E11),
+                    textColor: const Color(0xff2A6171),
+                    title: 'Deaths', counttextcolor: Color(0xff4A403A),
                   ),
                 ),
               ],
@@ -102,7 +102,7 @@ class StatusPanel extends StatelessWidget {
       //  width: width / 2,
       //color: panelColor,
       decoration: BoxDecoration(
-          color: const Color(0xff93FFD8),
+          color: const Color(0xffD7F7F5),
           borderRadius: BorderRadius.circular(15.0)),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,

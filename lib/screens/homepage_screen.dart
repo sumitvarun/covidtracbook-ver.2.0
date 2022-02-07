@@ -92,7 +92,9 @@ class _HomePageState extends State<HomePage> {
                           ),
                           // ignore: unnecessary_null_comparison
                           worldData == null
-                              ? const CircularProgressIndicator()
+                              ? const CircularProgressIndicator(
+                                  backgroundColor: Colors.red,
+                                )
                               : WorldWidePanel(widget, worldData: worldData),
 
                           Text(

@@ -36,7 +36,7 @@ class MostAffectedPanel extends StatelessWidget {
                   Text(
                     'Deaths:' + countryData[index]['deaths'].toString(),
                     style: const TextStyle(
-                        color: Colors.red,
+                        color: Color(0xffFF1700),
                         fontWeight: FontWeight.bold,
                         fontSize: 16.0),
                   )
