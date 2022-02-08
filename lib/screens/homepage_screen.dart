@@ -53,10 +53,10 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
-        statusBarColor: Colors.white,
-        systemNavigationBarColor: Colors.white,
-        systemNavigationBarDividerColor: Colors.white));
+    // SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+    //    statusBarColor: Colors.white,
+    //   systemNavigationBarColor: Colors.white,
+    //    systemNavigationBarDividerColor: Colors.white));
     return MaterialApp(
       title: 'COVIDTRACBOOK',
       home: CupertinoPageScaffold(

@@ -30,10 +30,10 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
-        statusBarColor: Colors.white,
-        systemNavigationBarColor: Colors.white,
-        systemNavigationBarDividerColor: Colors.white));
+    //SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+    //    statusBarColor: Colors.white,
+    //    systemNavigationBarColor: Colors.white,
+    //    systemNavigationBarDividerColor: Colors.white));
     return MaterialApp(
       home: Scaffold(
         backgroundColor: Colors.white,
