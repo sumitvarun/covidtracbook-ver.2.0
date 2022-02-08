@@ -55,12 +55,13 @@ class _HomePageState extends State<HomePage> {
     return MaterialApp(
       title: 'COVIDTRACBOOK',
       home: CupertinoPageScaffold(
+        backgroundColor: Colors.white,
         child: NestedScrollView(
             headerSliverBuilder:
                 (BuildContext context, bool innerBoxIsScrolled) {
               return <Widget>[
                 CupertinoSliverNavigationBar(
-                  backgroundColor: Colors.white,
+                  backgroundColor: Colors.transparent,
                   largeTitle: Text(
                     'COVIDTRACBOOK',
                     style: GoogleFonts.pacifico(
