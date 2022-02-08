@@ -17,7 +17,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Timer(
-      const Duration(seconds: 2),
+      const Duration(seconds: 10),
       () => Navigator.pushReplacement(
         context,
         MaterialPageRoute(
@@ -34,8 +34,9 @@ class _SplashScreenState extends State<SplashScreen> {
         body: Container(
           decoration: const BoxDecoration(
             image: DecorationImage(
-              image: AssetImage('lib/assets/image/Untitled design.png'),
-              fit: BoxFit.cover,
+              image: AssetImage(
+                  'lib/assets/image/CovidTracBook_2_0_copy_AdobeCreativeCloudExpress.gif'),
+              fit: BoxFit.contain,
             ),
           ),
           child: Center(
@@ -43,13 +44,13 @@ class _SplashScreenState extends State<SplashScreen> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Text(
-                  'COVIDTRACBOOK',
-                  style: GoogleFonts.pacifico(
-                      color: Colors.white,
-                      fontSize: 30,
-                      fontWeight: FontWeight.normal),
-                ),
+                // Text(
+                //   'COVIDTRACBOOK',
+                //   style: GoogleFonts.pacifico(
+                //       color: Colors.white,
+                //        fontSize: 30,
+                //        fontWeight: FontWeight.normal),
+                //  ),
                 // const Image(
                 //   image: AssetImage(
                 //        "lib/assets/images/MyStore-logos (3)/MyStore-logos.jpeg"),
@@ -59,22 +60,22 @@ class _SplashScreenState extends State<SplashScreen> {
                 //  ),
 
                 Column(
-                  children: [
-                    Text(
-                      'From',
-                      style: GoogleFonts.exo2(
-                          color: Colors.white,
-                          fontSize: 14,
-                          fontWeight: FontWeight.normal),
-                    ),
-                    const Image(
-                      image: AssetImage('lib/assets/image/SUMITVARUN (1).png'),
-                      height: 100,
-                      width: 100,
-                    ),
-                    const SizedBox(
-                      height: 5.0,
-                    ),
+                  children: const [
+                    //  Text(
+                    //    'From',
+                    //    style: GoogleFonts.exo2(
+                    //        color: Colors.white,
+                    //        fontSize: 14,
+                    //        fontWeight: FontWeight.normal),
+                    //  ),
+                    //  const Image(
+                    //    image: AssetImage('lib/assets/image/SUMITVARUN (1).png'),
+                    //    height: 100,
+                    //   width: 100,
+                    //  ),
+                    //  const SizedBox(
+                    //    height: 5.0,
+                    // ),
                   ],
                 ),
               ],
