@@ -1,3 +1,4 @@
+import 'package:covidtracbook/panels/search.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -37,6 +38,13 @@ class _CountryPageState extends State<CountryPage> {
           headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
             return <Widget>[
               CupertinoSliverNavigationBar(
+                leading: Material(
+                    child: IconButton(
+                  icon: const Icon(Icons.search),
+                  onPressed: () {
+                    showSearch(context: context, delegate: Search(countryData));
+                  },
+                )),
                 backgroundColor: Colors.white,
                 largeTitle: Text(
                   'COVIDTRACBOOK',
