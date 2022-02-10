@@ -1,4 +1,5 @@
 import 'package:covidtracbook/panels/search.dart';
+import 'package:covidtracbook/screens/homepage_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -39,11 +40,31 @@ class _CountryPageState extends State<CountryPage> {
             return <Widget>[
               CupertinoSliverNavigationBar(
                 leading: Material(
-                    child: IconButton(
-                  icon: const Icon(Icons.search),
-                  onPressed: () {
-                    showSearch(context: context, delegate: Search(countryData));
-                  },
+                    child: Row(
+                  children: [
+                    IconButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const HomePage()),
+                          );
+                        },
+                        icon: const Icon(
+                          Icons.home,
+                          color: Colors.black,
+                        )),
+                    IconButton(
+                      icon: const Icon(
+                        Icons.search,
+                        color: Colors.black,
+                      ),
+                      onPressed: () {
+                        showSearch(
+                            context: context, delegate: Search(countryData));
+                      },
+                    ),
+                  ],
                 )),
                 backgroundColor: Colors.white,
                 largeTitle: Text(
