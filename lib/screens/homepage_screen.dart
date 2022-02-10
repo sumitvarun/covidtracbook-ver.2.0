@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:covidtracbook/panels/country.dart';
 import 'package:covidtracbook/panels/helpbook.dart';
 import 'package:covidtracbook/panels/mostaffectedpanel.dart';
+import 'package:covidtracbook/panels/search.dart';
 import 'package:covidtracbook/panels/worldwidepanel.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
@@ -66,7 +67,35 @@ class _HomePageState extends State<HomePage> {
                 (BuildContext context, bool innerBoxIsScrolled) {
               return <Widget>[
                 CupertinoSliverNavigationBar(
-                  backgroundColor: Colors.transparent,
+                  leading: Material(
+                      child: Row(
+                    children: [
+                      //   IconButton(
+                      //      onPressed: () {
+                      //        Navigator.push(
+                      //          context,
+                      //         MaterialPageRoute(
+                      //             builder: (context) => const HomePage()),
+                      //      );
+                      //     },
+                      //     icon: const Icon(
+                      //       Icons.home,
+                      //       color: Colors.black,
+                      //    )),
+                      IconButton(
+                        icon: const Icon(
+                          Icons.search,
+                          color: Colors.black,
+                        ),
+                        onPressed: () {
+                          showSearch(
+                              context: context, delegate: Search(countryData));
+                        },
+                      ),
+                    ],
+                  )),
+                  //----------------------------------------
+                  backgroundColor: Colors.white,
                   largeTitle: Text(
                     'COVIDTRACBOOK',
                     style: GoogleFonts.pacifico(
