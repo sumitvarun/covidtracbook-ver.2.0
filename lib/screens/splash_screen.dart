@@ -41,7 +41,7 @@ class _SplashScreenState extends State<SplashScreen> {
           decoration: const BoxDecoration(
             image: DecorationImage(
               image: AssetImage(
-                  'lib/assets/image/CovidTracBook_2_0_copy_AdobeCreativeCloudExpress.gif'),
+                  'lib/assets/image/CovidTracBook_2_0_copy_2_logopng__1__AdobeCreativeCloudExpress.gif'),
               fit: BoxFit.contain,
             ),
           ),
