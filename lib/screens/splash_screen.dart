@@ -18,7 +18,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Timer(
-      const Duration(seconds: 10),
+      const Duration(seconds: 4),
       () => Navigator.pushReplacement(
         context,
         MaterialPageRoute(
@@ -40,8 +40,7 @@ class _SplashScreenState extends State<SplashScreen> {
         body: Container(
           decoration: const BoxDecoration(
             image: DecorationImage(
-              image: AssetImage(
-                  'lib/assets/image/CovidTracBook_copy3545_AdobeCreativeCloudExpress.gif'),
+              image: AssetImage('lib/assets/image/CovidTracBook copy3545.png'),
               fit: BoxFit.contain,
             ),
           ),
