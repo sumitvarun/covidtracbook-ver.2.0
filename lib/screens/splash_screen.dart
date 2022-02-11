@@ -36,7 +36,7 @@ class _SplashScreenState extends State<SplashScreen> {
     //    systemNavigationBarDividerColor: Colors.white));
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: const Color(0xffFD0376),
         body: Container(
           decoration: const BoxDecoration(
             image: DecorationImage(
