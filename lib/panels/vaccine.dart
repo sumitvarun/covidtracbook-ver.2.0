@@ -1,4 +1,4 @@
-import 'package:covidtracbook/panels/search.dart';
+import 'package:covidtracbook/panels/vaccine_search.dart';
 import 'package:covidtracbook/screens/homepage_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -71,7 +71,8 @@ class _VaccinePageState extends State<VaccinePage> {
                       ),
                       onPressed: () {
                         showSearch(
-                            context: context, delegate: Search(countryData));
+                            context: context,
+                            delegate: VaccineSearch(vaccineData));
                       },
                     ),
                   ],
@@ -138,31 +139,25 @@ class _VaccinePageState extends State<VaccinePage> {
                                       fontWeight: FontWeight.bold,
                                       color: Colors.red),
                                 ),
-                                //   Text(
-                                //      'ACTIVE:' +
-                                //          countryData[index]['active'].toString(),
+                                //     Text(
+                                //     'Total:' +
+                                //          vaccineData[index]['timeline']['total']
+                                //              .toString(),
                                 //      style: const TextStyle(
                                 //          fontWeight: FontWeight.bold,
-                                //          color: Colors.blue),
+                                //          color: Colors.green),
                                 //    ),
                                 //    Text(
-                                //     'RECOVERED:' +
-                                //           countryData[index]['recovered']
-                                //               .toString(),
-                                //       style: const TextStyle(
-                                //           fontWeight: FontWeight.bold,
-                                //            color: Colors.green),
-                                //    ),
-                                //  Text(
-                                //      'DEATHS:' +
-                                //         countryData[index]['deaths'].toString(),
-                                //     style: TextStyle(
+                                //      'daily:' +
+                                //         vaccineData[index]['timeline']['daily']
+                                //             .toString(),
+                                //      style: TextStyle(
                                 //         fontWeight: FontWeight.bold,
                                 //         color: Theme.of(context).brightness ==
                                 //                 Brightness.dark
                                 //             ? Colors.grey[100]
-                                //             : Colors.grey[900]),
-                                //    ),
+                                //            : Colors.grey[900]),
+                                //   ),
                               ],
                             ))
                           ],
