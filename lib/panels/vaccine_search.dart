@@ -49,23 +49,25 @@ class VaccineSearch extends SearchDelegate {
               margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
               child: Row(
                 children: <Widget>[
-                  Container(
-                    width: 200,
-                    margin: const EdgeInsets.symmetric(horizontal: 10),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        Text(
-                          suggestionList[index]['country'],
-                          style: const TextStyle(fontWeight: FontWeight.bold),
-                        ),
-                        // Image.network(
-                        //   suggestionList[index]['countryInfo']['flag'],
-                        //   height: 50,
-                        //   width: 60,
-                        // ),
-                      ],
+                  Expanded(
+                    child: Container(
+                      // width: 200,
+                      margin: const EdgeInsets.symmetric(horizontal: 10),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Text(
+                            suggestionList[index]['country'],
+                            style: const TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                          // Image.network(
+                          //   suggestionList[index]['countryInfo']['flag'],
+                          //   height: 50,
+                          //   width: 60,
+                          // ),
+                        ],
+                      ),
                     ),
                   ),
                   Expanded(

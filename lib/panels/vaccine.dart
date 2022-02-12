@@ -108,7 +108,7 @@ class _VaccinePageState extends State<VaccinePage> {
                           children: <Widget>[
                             Expanded(
                               child: Container(
-                                width: 200,
+                                // width: 200,
                                 margin:
                                     const EdgeInsets.symmetric(horizontal: 10),
                                 child: Column(
