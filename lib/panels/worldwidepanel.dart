@@ -20,7 +20,7 @@ class WorldWidePanel extends StatelessWidget {
                       title: 'Confirmed',
                       counttextcolor: Color(0xffFF1700),
                       image:
-                          'https://img.icons8.com/ios/250/000000/coronavirus--v2.gif'),
+                          'https://img.icons8.com/ios/500/000000/coronavirus--v2.gif'),
                 ),
                 Expanded(
                   child: StatusPanel(
@@ -30,7 +30,7 @@ class WorldWidePanel extends StatelessWidget {
                       title: 'Active',
                       counttextcolor: Color(0xff0F00FF),
                       image:
-                          'https://img.icons8.com/ios/100/000000/recovery.png'),
+                          'https://img.icons8.com/ios/500/000000/sneeze--v2.gif'),
                 ),
               ],
             ),
@@ -44,7 +44,7 @@ class WorldWidePanel extends StatelessWidget {
                       title: 'Recovered',
                       counttextcolor: Color(0xff125C13),
                       image:
-                          'https://img.icons8.com/ios-glyphs/240/000000/trust--v2.gif'),
+                          'https://img.icons8.com/ios-glyphs/500/000000/trust--v2.gif'),
                 ),
                 Expanded(
                   child: StatusPanel(
@@ -78,7 +78,7 @@ class WorldWidePanel extends StatelessWidget {
                       title: 'Deaths',
                       counttextcolor: Color(0xff4A403A),
                       image:
-                          'https://img.icons8.com/ios-glyphs/240/000000/death--v2.gif'),
+                          'https://img.icons8.com/ios-glyphs/480/000000/death--v2.gif'),
                 ),
               ],
             )
