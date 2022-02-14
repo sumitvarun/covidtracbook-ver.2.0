@@ -34,6 +34,13 @@ class _SplashScreenState extends State<SplashScreen> {
     //    statusBarColor: Colors.white,
     //    systemNavigationBarColor: Colors.white,
     //    systemNavigationBarDividerColor: Colors.white));
+    SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+      statusBarColor: Color(0xffFD0376),
+      systemNavigationBarColor: Color(0xffFD0376),
+      statusBarIconBrightness: Brightness.light,
+      statusBarBrightness: Brightness.dark,
+      systemNavigationBarDividerColor: Color(0xffFD0376),
+    )); //Change App Statusbar style :  Status Bar | Bottom Navigation Bar Color | Statusbar text color
     return MaterialApp(
       home: Scaffold(
         backgroundColor: const Color(0xffFD0376),

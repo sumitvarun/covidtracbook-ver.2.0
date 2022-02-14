@@ -2,6 +2,7 @@ import 'package:covidtracbook/panels/search.dart';
 import 'package:covidtracbook/screens/homepage_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
@@ -32,6 +33,14 @@ class _CountryPageState extends State<CountryPage> {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+        statusBarColor: Colors.white,
+        systemNavigationBarColor: Colors.white,
+        statusBarIconBrightness: Brightness.light,
+        statusBarBrightness: Brightness.dark,
+        systemNavigationBarDividerColor: Colors
+            .white)); //Change App Statusbar style :  Status Bar | Bottom Navigation Bar Color | Statusbar text color
+
     return MaterialApp(
         title: 'COVIDTRACBOOK',
         home: CupertinoPageScaffold(
