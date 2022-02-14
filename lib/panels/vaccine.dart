@@ -27,7 +27,7 @@ class _VaccinePageState extends State<VaccinePage> {
 
   fetchVaccineData() async {
     http.Response response = await http.get(Uri.parse(
-        'https://disease.sh/v3/covid-19/vaccine/coverage/countries?lastdays=7&fullData=false'));
+        'https://disease.sh/v3/covid-19/vaccine/coverage/countries?lastdays=7&fullData=false')); //you can set vaccina data to get  1- 30 days details (lastdays =7&fulldata=false)
     setState(() {
       vaccineData = json.decode(response.body);
     });
