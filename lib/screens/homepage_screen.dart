@@ -63,7 +63,8 @@ class _HomePageState extends State<HomePage> {
     return MaterialApp(
       title: 'COVIDTRACBOOK',
       home: CupertinoPageScaffold(
-        backgroundColor: Colors.white,
+        //backgroundColor: Colors.white,
+        backgroundColor: const Color(0xffD5DBDB),
         child: NestedScrollView(
             headerSliverBuilder:
                 (BuildContext context, bool innerBoxIsScrolled) {
