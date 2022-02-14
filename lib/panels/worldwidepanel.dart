@@ -116,7 +116,23 @@ class StatusPanel extends StatelessWidget {
       //  width: width / 2,
       //color: panelColor,
       decoration: BoxDecoration(
-          color: const Color(0xffD7F7F5),
+          //color: const Color(0xffD7F7F5),
+          color: const Color(0xffE5E8E8),
+          // color: const Color(0xffEEEEEE),
+
+          // boxShadow: const [
+          //background color of box
+          //   BoxShadow(
+          //     color: Color(0xffADFD02),
+          //     blurRadius: 10.0, // soften the shadow
+          //     spreadRadius: 1.0, //extend the shadow
+          //     blurStyle: BlurStyle.normal
+          //     //  offset: Offset(
+          //    15.0, // Move to right 10  horizontally
+          //    15.0, // Move to bottom 10 Vertically
+          //   ),
+          //     )
+          //  ],
           borderRadius: BorderRadius.circular(15.0)),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
