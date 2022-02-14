@@ -6,6 +6,7 @@ import 'package:covidtracbook/panels/mostaffectedpanel.dart';
 import 'package:covidtracbook/panels/search.dart';
 import 'package:covidtracbook/panels/vaccine.dart';
 import 'package:covidtracbook/panels/worldwidepanel.dart';
+import 'package:covidtracbook/widgets/carousel.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -182,6 +183,10 @@ class _HomePageState extends State<HomePage> {
                             icon: const Icon(Icons.coronavirus_outlined),
                             label: const Text('Vaccine'),
                           ),
+
+                          //coursel image start
+
+                          //coursel image end
                         ],
                       ),
                     ),
