@@ -128,9 +128,9 @@ class _HomePageState extends State<HomePage> {
                         children: <Widget>[
                           Text(
                             'WORLDWIDE',
-                            style: GoogleFonts.exo(
+                            style: GoogleFonts.quicksand(
                               color: Colors.black,
-                              fontWeight: FontWeight.w200,
+                              fontWeight: FontWeight.w500,
                               fontSize: 18.0,
                             ),
                           ),
@@ -143,9 +143,9 @@ class _HomePageState extends State<HomePage> {
 
                           Text(
                             'Most Affected Countries',
-                            style: GoogleFonts.exo(
+                            style: GoogleFonts.quicksand(
                               color: Colors.black,
-                              fontWeight: FontWeight.w200,
+                              fontWeight: FontWeight.w500,
                               fontSize: 18.0,
                             ),
                           ),
@@ -154,40 +154,79 @@ class _HomePageState extends State<HomePage> {
                           countryData == null
                               ? Container()
                               : MostAffectedPanel(countryData: countryData),
-                          TextButton.icon(
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) =>
-                                        const questionAnswer()),
-                              );
-                            },
-                            icon: const Icon(Icons.coronavirus_outlined),
-                            label: const Text('Helpbook'),
-                          ),
-                          TextButton.icon(
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => const CountryPage()),
-                              );
-                            },
-                            icon: const Icon(Icons.coronavirus_outlined),
-                            label: const Text('Regional'),
-                          ),
-                          TextButton.icon(
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => const VaccinePage()),
-                              );
-                            },
-                            icon: const Icon(Icons.coronavirus_outlined),
-                            label: const Text('Vaccine'),
-                          ),
+
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              TextButton.icon(
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            const questionAnswer()),
+                                  );
+                                },
+                                icon: const Icon(
+                                  Icons.help_center_sharp,
+                                  color: Colors.black,
+                                ),
+                                label: Text(
+                                  'Helpbook',
+                                  style: GoogleFonts.raleway(
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.bold,
+                                    //fontSize: 12.0,
+                                  ),
+                                ),
+                              ),
+                              TextButton.icon(
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            const CountryPage()),
+                                  );
+                                },
+                                icon: const Icon(
+                                  Icons.travel_explore_sharp,
+                                  color: Colors.black,
+                                ),
+                                label: Text(
+                                  'Regional',
+                                  style: GoogleFonts.raleway(
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.bold,
+                                    //fontSize: 12.0,
+                                  ),
+                                ),
+                              ),
+                              TextButton.icon(
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            const VaccinePage()),
+                                  );
+                                },
+                                icon: const Icon(
+                                  Icons.personal_injury_sharp,
+                                  color: Colors.black,
+                                ),
+                                label: Text(
+                                  'Vaccine',
+                                  style: GoogleFonts.raleway(
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.bold,
+                                    //fontSize: 12.0,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          )
 
                           //coursel image start
 

@@ -10,6 +10,11 @@ class MostAffectedPanel extends StatelessWidget {
   Widget build(BuildContext context) {
     return Material(
       child: Container(
+        margin: const EdgeInsets.all(10.0),
+        decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(8.0),
+            border: Border.all(color: Colors.black, width: 0.5)),
         child: ListView.builder(
           shrinkWrap: true,
           physics: const NeverScrollableScrollPhysics(),
