@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class WorldWidePanel extends StatelessWidget {
   const WorldWidePanel(Widget widget, {Key? key, required this.worldData})
@@ -146,15 +147,19 @@ class StatusPanel extends StatelessWidget {
           ),
           Text(
             title,
-            style: TextStyle(
-                fontWeight: FontWeight.bold, fontSize: 16, color: textColor),
+            style: GoogleFonts.ubuntu(
+              color: textColor,
+              fontWeight: FontWeight.w500,
+              fontSize: 16.0,
+            ),
           ),
           Text(
             count,
-            style: TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.bold,
-                color: counttextcolor),
+            style: GoogleFonts.quicksand(
+              color: counttextcolor,
+              fontWeight: FontWeight.w500,
+              fontSize: 16.0,
+            ),
           ),
         ],
       ),

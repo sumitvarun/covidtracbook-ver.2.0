@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Search extends SearchDelegate {
   final List countryList;
@@ -10,7 +11,7 @@ class Search extends SearchDelegate {
   List<Widget> buildActions(BuildContext context) {
     return [
       IconButton(
-          icon: Icon(Icons.clear),
+          icon: const Icon(Icons.clear),
           onPressed: () {
             query = '';
           })
@@ -59,7 +60,11 @@ class Search extends SearchDelegate {
                       children: <Widget>[
                         Text(
                           suggestionList[index]['country'],
-                          style: const TextStyle(fontWeight: FontWeight.bold),
+                          style: GoogleFonts.quicksand(
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold,
+                            //fontSize: 12.0,
+                          ),
                         ),
                         Image.network(
                           suggestionList[index]['countryInfo']['flag'],
@@ -76,30 +81,38 @@ class Search extends SearchDelegate {
                         Text(
                           'CONFIRMED:' +
                               suggestionList[index]['cases'].toString(),
-                          style: const TextStyle(
-                              fontWeight: FontWeight.bold, color: Colors.red),
+                          style: GoogleFonts.quicksand(
+                            color: const Color(0xffFF1700),
+                            fontWeight: FontWeight.bold,
+                            //fontSize: 12.0,
+                          ),
                         ),
                         Text(
                           'ACTIVE:' +
                               suggestionList[index]['active'].toString(),
-                          style: const TextStyle(
-                              fontWeight: FontWeight.bold, color: Colors.blue),
+                          style: GoogleFonts.quicksand(
+                            color: Colors.blue,
+                            fontWeight: FontWeight.bold,
+                            //fontSize: 12.0,
+                          ),
                         ),
                         Text(
                           'RECOVERED:' +
                               suggestionList[index]['recovered'].toString(),
-                          style: const TextStyle(
-                              fontWeight: FontWeight.bold, color: Colors.green),
+                          style: GoogleFonts.quicksand(
+                            color: Colors.green,
+                            fontWeight: FontWeight.bold,
+                            //fontSize: 12.0,
+                          ),
                         ),
                         Text(
                           'DEATHS:' +
                               suggestionList[index]['deaths'].toString(),
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: Theme.of(context).brightness ==
-                                      Brightness.dark
-                                  ? Colors.grey[100]
-                                  : Colors.grey[900]),
+                          style: GoogleFonts.quicksand(
+                            color: Colors.grey[900],
+                            fontWeight: FontWeight.bold,
+                            //fontSize: 12.0,
+                          ),
                         ),
                       ],
                     ),

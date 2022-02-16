@@ -115,8 +115,11 @@ class _CountryPageState extends State<CountryPage> {
                                 children: <Widget>[
                                   Text(
                                     countryData[index]['country'],
-                                    style: const TextStyle(
-                                        fontWeight: FontWeight.bold),
+                                    style: GoogleFonts.quicksand(
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.w700,
+                                      // fontSize: 18.0,
+                                    ),
                                   ),
                                   Image.network(
                                     countryData[index]['countryInfo']['flag'],
@@ -132,34 +135,45 @@ class _CountryPageState extends State<CountryPage> {
                                 Text(
                                   'CONFIRMED:' +
                                       countryData[index]['cases'].toString(),
-                                  style: const TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.red),
+                                  style: GoogleFonts.quicksand(
+                                    color: const Color(0xffFF1700),
+                                    fontWeight: FontWeight.bold,
+                                    //fontSize: 12.0,
+                                  ),
                                 ),
                                 Text(
                                   'ACTIVE:' +
                                       countryData[index]['active'].toString(),
-                                  style: const TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.blue),
+                                  style: GoogleFonts.quicksand(
+                                    color: Colors.blue,
+                                    fontWeight: FontWeight.bold,
+                                    //fontSize: 12.0,
+                                  ),
                                 ),
                                 Text(
                                   'RECOVERED:' +
                                       countryData[index]['recovered']
                                           .toString(),
-                                  style: const TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.green),
+                                  style: GoogleFonts.quicksand(
+                                    color: Colors.green,
+                                    fontWeight: FontWeight.bold,
+                                    //fontSize: 12.0,
+                                  ),
                                 ),
                                 Text(
                                   'DEATHS:' +
                                       countryData[index]['deaths'].toString(),
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      color: Theme.of(context).brightness ==
-                                              Brightness.dark
-                                          ? Colors.grey[100]
-                                          : Colors.grey[900]),
+                                  style: GoogleFonts.quicksand(
+                                    color: Colors.grey[900],
+                                    fontWeight: FontWeight.bold,
+                                    //fontSize: 12.0,
+                                  ),
+                                  //   style: TextStyle(
+                                  //      fontWeight: FontWeight.bold,
+                                  //     color: Theme.of(context).brightness ==
+                                  //             Brightness.dark
+                                  //         ? Colors.grey[100]
+                                  //         : Colors.grey[900]),
                                 ),
                               ],
                             ))

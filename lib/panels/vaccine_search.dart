@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class VaccineSearch extends SearchDelegate {
   final List vaccineList;
@@ -10,7 +11,7 @@ class VaccineSearch extends SearchDelegate {
   List<Widget> buildActions(BuildContext context) {
     return [
       IconButton(
-          icon: Icon(Icons.clear),
+          icon: const Icon(Icons.clear),
           onPressed: () {
             query = '';
           })
@@ -59,7 +60,11 @@ class VaccineSearch extends SearchDelegate {
                         children: <Widget>[
                           Text(
                             suggestionList[index]['country'],
-                            style: const TextStyle(fontWeight: FontWeight.bold),
+                            style: GoogleFonts.quicksand(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              //fontSize: 12.0,
+                            ),
                           ),
                           // Image.network(
                           //   suggestionList[index]['countryInfo']['flag'],
@@ -74,10 +79,23 @@ class VaccineSearch extends SearchDelegate {
                       child: Column(
                     children: <Widget>[
                       Text(
-                        'Timeline:' +
-                            suggestionList[index]['timeline'].toString(),
-                        style: const TextStyle(
-                            fontWeight: FontWeight.bold, color: Colors.red),
+                        'Timeline:',
+                        // + suggestionList[index]['timeline'].toString(),
+                        style: GoogleFonts.quicksand(
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                          //fontSize: 12.0,
+                        ),
+                      ),
+
+                      Text(
+                        // 'Timeline:' +
+                        suggestionList[index]['timeline'].toString(),
+                        style: GoogleFonts.quicksand(
+                          color: const Color(0xffFF1700),
+                          fontWeight: FontWeight.bold,
+                          //fontSize: 12.0,
+                        ),
                       ),
                       // Text(
                       //  'Daily:' + suggestionList[index]['daily'].toString(),

@@ -125,8 +125,11 @@ class _VaccinePageState extends State<VaccinePage> {
                                   children: <Widget>[
                                     Text(
                                       vaccineData[index]['country'],
-                                      style: const TextStyle(
-                                          fontWeight: FontWeight.bold),
+                                      style: GoogleFonts.quicksand(
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.bold,
+                                        //fontSize: 12.0,
+                                      ),
                                     ),
                                     Image.network(
                                       countryData[index]['countryInfo']['flag'],
@@ -141,11 +144,21 @@ class _VaccinePageState extends State<VaccinePage> {
                                 child: Column(
                               children: <Widget>[
                                 Text(
-                                  'Timeline:' +
-                                      vaccineData[index]['timeline'].toString(),
-                                  style: const TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.red),
+                                  'Timeline:',
+                                  //  + vaccineData[index]['timeline'].toString(),
+                                  style: GoogleFonts.quicksand(
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.bold,
+                                    //fontSize: 12.0,
+                                  ),
+                                ),
+                                Text(
+                                  vaccineData[index]['timeline'].toString(),
+                                  style: GoogleFonts.quicksand(
+                                    color: const Color(0xffFF1700),
+                                    fontWeight: FontWeight.w700,
+                                    //fontSize: 12.0,
+                                  ),
                                 ),
                                 //     Text(
                                 //     'Total:' +

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class MostAffectedPanel extends StatelessWidget {
   final List countryData;
@@ -14,7 +15,7 @@ class MostAffectedPanel extends StatelessWidget {
         decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(8.0),
-            border: Border.all(color: Colors.black, width: 0.5)),
+            border: Border.all(color: const Color(0xff99A3A4), width: 0.5)),
         child: ListView.builder(
           shrinkWrap: true,
           physics: const NeverScrollableScrollPhysics(),
@@ -32,19 +33,32 @@ class MostAffectedPanel extends StatelessWidget {
                   ),
                   Text(
                     countryData[index]['country'],
-                    style: const TextStyle(
-                        fontWeight: FontWeight.bold, fontSize: 16.0),
+                    style: GoogleFonts.ubuntu(
+                      color: Colors.black,
+                      fontWeight: FontWeight.w500,
+                      fontSize: 16.0,
+                    ),
                   ),
                   const SizedBox(
                     width: 20,
                   ),
                   Text(
-                    'Deaths: ' + countryData[index]['deaths'].toString(),
-                    style: const TextStyle(
-                        color: Color(0xffFF1700),
-                        fontWeight: FontWeight.bold,
-                        fontSize: 16.0),
-                  )
+                    // 'Deaths: ' + countryData[index]['deaths'].toString(),
+                    'Deaths: ',
+                    style: GoogleFonts.quicksand(
+                      color: const Color(0xff424949),
+                      fontWeight: FontWeight.w500,
+                      fontSize: 16.0,
+                    ),
+                  ),
+                  Text(
+                    countryData[index]['deaths'].toString(),
+                    style: GoogleFonts.quicksand(
+                      color: const Color(0xffFF1700),
+                      fontWeight: FontWeight.w500,
+                      fontSize: 16.0,
+                    ),
+                  ),
                 ],
               ),
             );
