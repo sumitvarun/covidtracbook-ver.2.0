@@ -6,6 +6,7 @@ class DataSource {
   static String quote =
       'You don’t need to know the whole alphabet of Safety. The A, B, C of it will save you if you follow it: Always Be Careful.';
   static List questionAnswer = [
+    {'question': 'General Information', 'answer': ''},
     {
       'question': 'what is a corona virus?',
       'answer':
@@ -177,6 +178,22 @@ class DataSource {
       'answer':
           'While initial investigations suggest the virus may be present in faeces in some cases, to date, there have not been reports of faecal-oral transmission of COVID-19. Additionally, there is no evidence to date on the survival of the COVID-19 virus in water or sewage.'
     },
+    // subject : Vaccines, Biologics, Human Tissues, and Blood Products
+    {
+      'question': 'Vaccines, Biologics, Human Tissues, and Blood Products',
+      'answer': ''
+    },
+    {
+      'question': 'Q: How do I report COVID-19 vaccine side effects?',
+      'answer':
+          'A: If you experience a severe allergic reaction or any life-threatening symptoms such as trouble breathing, call 911, or go to the nearest hospital. Call the vaccination provider or your health care provider if you have any side effects that bother you or do not go away. Report vaccine side effects to FDA/CDC Vaccine Adverse Event Reporting System (VAERS). The VAERS toll-free number is 1-800-822-7967 or report online to https://vaers.hhs.gov/reportevent.html. Please include the name of the vaccine in the first line of box #18 of the report form. '
+    },
+    {'question': '', 'answer': ''},
+    {'question': '', 'answer': ''},
+    {'question': '', 'answer': ''},
+    {'question': '', 'answer': ''},
+    {'question': '', 'answer': ''},
+    {'question': '', 'answer': ''},
     {'question': '', 'answer': ''},
   ];
 }

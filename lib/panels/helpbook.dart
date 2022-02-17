@@ -69,23 +69,25 @@ class questionAnswer extends StatelessWidget {
                   child: Container(
                 color: Colors.white,
                 child: ListView.builder(
-                    itemCount: List.filled(21, null, growable: false).length,
+                    itemCount: List.filled(26, null, growable: false).length,
                     itemBuilder: (context, index) {
                       return ExpansionTile(
                         title: Text(
                           DataSource.questionAnswer[index]["question"],
-                          style: TextStyle(
-                              color: Colors.grey[900],
-                              fontFamily: 'Circular',
+                          style: GoogleFonts.quicksand(
+                              color: Colors.black,
+                              // fontFamily: 'Circular',
                               fontWeight: FontWeight.bold),
                         ),
                         children: [
-                          Text(
-                            DataSource.questionAnswer[index]['answer'],
-                            style: TextStyle(
-                                color: Colors.grey[900],
-                                fontFamily: 'Circular',
-                                fontWeight: FontWeight.w500),
+                          Container(
+                            margin: const EdgeInsets.all(18.0),
+                            child: Text(
+                              DataSource.questionAnswer[index]['answer'],
+                              style: GoogleFonts.quicksand(
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.w500),
+                            ),
                           )
                         ],
                       );
