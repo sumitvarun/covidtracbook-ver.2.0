@@ -57,13 +57,12 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
-        statusBarColor: Colors.white,
-        systemNavigationBarColor: Colors.white,
-        statusBarIconBrightness: Brightness.light,
-        statusBarBrightness: Brightness.dark,
-        systemNavigationBarDividerColor: Colors.white,
-        systemNavigationBarIconBrightness: Brightness
-            .light)); //Change App Statusbar style :  Status Bar | Bottom Navigation Bar Color | Statusbar text color
+      statusBarColor: Colors.white,
+      systemNavigationBarColor: Colors.white,
+      statusBarIconBrightness: Brightness.light,
+      statusBarBrightness: Brightness.dark,
+      systemNavigationBarDividerColor: Colors.white,
+    )); //Change App Statusbar style :  Status Bar | Bottom Navigation Bar Color | Statusbar text color
     // SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark);
     return MaterialApp(
       title: 'COVIDTRACBOOK',
@@ -235,36 +234,37 @@ class _HomePageState extends State<HomePage> {
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
-                                Container(
-                                  decoration: BoxDecoration(
-                                      color: const Color(0xffD5DBDB),
-                                      borderRadius:
-                                          BorderRadius.circular(25.0)),
-                                  child: Text(
-                                    '  COVID19 PREVENTIONS  ',
-                                    style: GoogleFonts.quicksand(
-                                      color: Colors.black,
-                                      fontWeight: FontWeight.w500,
-                                      fontSize: 18.0,
-                                    ),
+                                // Container(
+                                //decoration: BoxDecoration(
+                                //    color: const Color(0xffD5DBDB),
+                                //    borderRadius:
+                                //       BorderRadius.circular(25.0)),
+                                // child:
+                                Text(
+                                  '  COVID19 PREVENTIONS  ',
+                                  style: GoogleFonts.quicksand(
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.w500,
+                                    fontSize: 18.0,
                                   ),
                                 ),
+                                // ),
                                 Row(
                                   children: const <Widget>[
                                     Expanded(
                                       child: Image(
                                           image: AssetImage(
-                                              'lib/assets/Anm.Covidprev/png/Wash Hands.png')),
+                                              'lib/assets/Anm.Covidprev/WashHandsgif.gif')),
                                     ),
                                     Expanded(
                                       child: Image(
                                           image: AssetImage(
-                                              'lib/assets/Anm.Covidprev/png/Wear Mask.png')),
+                                              'lib/assets/Anm.Covidprev/WearMaskgif.gif')),
                                     ),
                                     Expanded(
                                       child: Image(
                                           image: AssetImage(
-                                              'lib/assets/Anm.Covidprev/png/Use Soap.png')),
+                                              'lib/assets/Anm.Covidprev/Usesoapgif.gif')),
                                     )
                                   ],
                                 ),
@@ -273,17 +273,17 @@ class _HomePageState extends State<HomePage> {
                                     Expanded(
                                       child: Image(
                                           image: AssetImage(
-                                              'lib/assets/Anm.Covidprev/png/Avoid ShakeHands.png')),
+                                              'lib/assets/Anm.Covidprev/AvoidShakehandgif.gif')),
                                     ),
                                     Expanded(
                                       child: Image(
                                           image: AssetImage(
-                                              'lib/assets/Anm.Covidprev/png/Temperature.png')),
+                                              'lib/assets/Anm.Covidprev/Temperature checkgif.gif')),
                                     ),
                                     Expanded(
                                       child: Image(
                                           image: AssetImage(
-                                              'lib/assets/Anm.Covidprev/png/Keep Distance.png')),
+                                              'lib/assets/Anm.Covidprev/KeepDistancegif.gif')),
                                     ),
                                   ],
                                 ),
