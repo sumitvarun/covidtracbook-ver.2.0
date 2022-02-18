@@ -58,10 +58,10 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
         statusBarColor: Colors.white,
-        systemNavigationBarColor: Color(0xffD5DBDB),
+        systemNavigationBarColor: Colors.white,
         statusBarIconBrightness: Brightness.light,
         statusBarBrightness: Brightness.dark,
-        systemNavigationBarDividerColor: Color(0xffD5DBDB),
+        systemNavigationBarDividerColor: Colors.white,
         systemNavigationBarIconBrightness: Brightness
             .light)); //Change App Statusbar style :  Status Bar | Bottom Navigation Bar Color | Statusbar text color
     // SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark);
@@ -294,25 +294,25 @@ class _HomePageState extends State<HomePage> {
                           //coursel image start
 
                           //coursel image end
-                          Container(
-                            width: double.infinity,
-                            height: 50.0,
-                            decoration: const BoxDecoration(
-                                color: Color(0xffD5DBDB),
-                                // borderRadius: BorderRadius.only(
-                                //     topLeft: Radius.circular(15.0),
-                                //     topRight: Radius.circular(15.0)),
-                                borderRadius: BorderRadius.vertical(
-                                    top: Radius.elliptical(150, 30))),
-                            child: Text(
-                              '  . ',
-                              style: GoogleFonts.quicksand(
-                                color: Colors.black,
-                                fontWeight: FontWeight.w500,
-                                fontSize: 18.0,
-                              ),
-                            ),
-                          ),
+                          //      Container(
+                          //        width: double.infinity,
+                          //        height: 50.0,
+                          ////      decoration: const BoxDecoration(
+                          //         color: Color(0xffD5DBDB),
+                          //          // borderRadius: BorderRadius.only(
+                          //     topLeft: Radius.circular(15.0),
+                          //     topRight: Radius.circular(15.0)),
+                          //     borderRadius: BorderRadius.vertical(
+                          //         top: Radius.elliptical(150, 30))),
+                          // child: Text(
+                          //   '  . ',
+                          //    style: GoogleFonts.quicksand(
+                          //      color: Colors.black,
+                          //     fontWeight: FontWeight.w500,
+                          //     fontSize: 18.0,
+                          //   ),
+                          //  ),
+                          //   ),
                         ],
                       ),
                     ),
