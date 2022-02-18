@@ -66,6 +66,12 @@ flutter:
   - lib/assets/image/SUMITVARUN (1).png
   - lib/assets/image/CovidTracBook_copy3545_AdobeCreativeCloudExpress.gif
   - lib/assets/image/CovidTracBook copy3545.png
+  - lib/assets/Anm.Covidprev/png/Avoid ShakeHands.png
+  - lib/assets/Anm.Covidprev/png/Keep Distance.png
+  - lib/assets/Anm.Covidprev/png/Temperature.png
+  - lib/assets/Anm.Covidprev/png/Use Soap.png
+  - lib/assets/Anm.Covidprev/png/Wash Hands.png
+  - lib/assets/Anm.Covidprev/png/Wear Mask.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

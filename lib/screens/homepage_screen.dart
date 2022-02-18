@@ -58,11 +58,12 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
         statusBarColor: Colors.white,
-        systemNavigationBarColor: Colors.white,
+        systemNavigationBarColor: Color(0xffD5DBDB),
         statusBarIconBrightness: Brightness.light,
         statusBarBrightness: Brightness.dark,
-        systemNavigationBarDividerColor: Colors
-            .white)); //Change App Statusbar style :  Status Bar | Bottom Navigation Bar Color | Statusbar text color
+        systemNavigationBarDividerColor: Color(0xffD5DBDB),
+        systemNavigationBarIconBrightness: Brightness
+            .light)); //Change App Statusbar style :  Status Bar | Bottom Navigation Bar Color | Statusbar text color
     // SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark);
     return MaterialApp(
       title: 'COVIDTRACBOOK',
@@ -226,11 +227,92 @@ class _HomePageState extends State<HomePage> {
                                 ),
                               ),
                             ],
-                          )
+                          ),
+
+                          Container(
+                            margin: const EdgeInsets.all(20.0),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Container(
+                                  decoration: BoxDecoration(
+                                      color: const Color(0xffD5DBDB),
+                                      borderRadius:
+                                          BorderRadius.circular(25.0)),
+                                  child: Text(
+                                    '  COVID19 PREVENTIONS  ',
+                                    style: GoogleFonts.quicksand(
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 18.0,
+                                    ),
+                                  ),
+                                ),
+                                Row(
+                                  children: const <Widget>[
+                                    Expanded(
+                                      child: Image(
+                                          image: AssetImage(
+                                              'lib/assets/Anm.Covidprev/png/Wash Hands.png')),
+                                    ),
+                                    Expanded(
+                                      child: Image(
+                                          image: AssetImage(
+                                              'lib/assets/Anm.Covidprev/png/Wear Mask.png')),
+                                    ),
+                                    Expanded(
+                                      child: Image(
+                                          image: AssetImage(
+                                              'lib/assets/Anm.Covidprev/png/Use Soap.png')),
+                                    )
+                                  ],
+                                ),
+                                Row(
+                                  children: const <Widget>[
+                                    Expanded(
+                                      child: Image(
+                                          image: AssetImage(
+                                              'lib/assets/Anm.Covidprev/png/Avoid ShakeHands.png')),
+                                    ),
+                                    Expanded(
+                                      child: Image(
+                                          image: AssetImage(
+                                              'lib/assets/Anm.Covidprev/png/Temperature.png')),
+                                    ),
+                                    Expanded(
+                                      child: Image(
+                                          image: AssetImage(
+                                              'lib/assets/Anm.Covidprev/png/Keep Distance.png')),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
 
                           //coursel image start
 
                           //coursel image end
+                          Container(
+                            width: double.infinity,
+                            height: 50.0,
+                            decoration: const BoxDecoration(
+                                color: Color(0xffD5DBDB),
+                                // borderRadius: BorderRadius.only(
+                                //     topLeft: Radius.circular(15.0),
+                                //     topRight: Radius.circular(15.0)),
+                                borderRadius: BorderRadius.vertical(
+                                    top: Radius.elliptical(150, 30))),
+                            child: Text(
+                              '  . ',
+                              style: GoogleFonts.quicksand(
+                                color: Colors.black,
+                                fontWeight: FontWeight.w500,
+                                fontSize: 18.0,
+                              ),
+                            ),
+                          ),
                         ],
                       ),
                     ),
