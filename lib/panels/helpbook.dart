@@ -30,23 +30,19 @@ class questionAnswer extends StatelessWidget {
                 (BuildContext context, bool innerBoxIsScrolled) {
               return <Widget>[
                 CupertinoSliverNavigationBar(
-                  leading: Material(
-                      child: Row(
-                    children: [
-                      IconButton(
-                          onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const HomePage()),
-                            );
-                          },
-                          icon: const Icon(
-                            Icons.home,
-                            color: Colors.black,
-                          )),
-                    ],
-                  )),
+                  leading: CupertinoButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const HomePage()),
+                      );
+                    },
+                    child: const Icon(
+                      Icons.home_filled,
+                      color: Colors.black,
+                    ),
+                  ),
                   //----------------------------------------
                   backgroundColor: Colors.white,
                   largeTitle: Text(

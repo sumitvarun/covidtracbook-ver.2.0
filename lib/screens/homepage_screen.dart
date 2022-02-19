@@ -74,33 +74,31 @@ class _HomePageState extends State<HomePage> {
                 (BuildContext context, bool innerBoxIsScrolled) {
               return <Widget>[
                 CupertinoSliverNavigationBar(
-                  leading: Material(
-                      child: Row(
-                    children: [
-                      //   IconButton(
-                      //      onPressed: () {
-                      //        Navigator.push(
-                      //          context,
-                      //         MaterialPageRoute(
-                      //             builder: (context) => const HomePage()),
-                      //      );
-                      //     },
-                      //     icon: const Icon(
-                      //       Icons.home,
-                      //       color: Colors.black,
-                      //    )),
-                      IconButton(
-                        icon: const Icon(
-                          Icons.search,
-                          color: Colors.black,
-                        ),
-                        onPressed: () {
-                          showSearch(
-                              context: context, delegate: Search(countryData));
-                        },
-                      ),
-                    ],
-                  )),
+                  leading: CupertinoButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const HomePage()),
+                      );
+                    },
+                    child: const Icon(
+                      Icons.home_filled,
+                      color: Colors.black,
+                    ),
+                  ),
+                  trailing: CupertinoButton(
+                    alignment: Alignment.centerRight,
+                    onPressed: () {
+                      showSearch(
+                          context: context, delegate: Search(countryData));
+                    },
+                    child: const Icon(
+                      Icons.search,
+                      color: Colors.black,
+                    ),
+                  ),
+
                   //----------------------------------------
                   backgroundColor: Colors.white,
                   largeTitle: Text(

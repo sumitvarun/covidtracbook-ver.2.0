@@ -7,6 +7,10 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
+void main() => runApp(const CupertinoApp(
+      home: HomePage(),
+    ));
+
 class CountryPage extends StatefulWidget {
   const CountryPage({Key? key}) : super(key: key);
 
@@ -48,36 +52,39 @@ class _CountryPageState extends State<CountryPage> {
           headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
             return <Widget>[
               CupertinoSliverNavigationBar(
-                leading: Material(
-                    child: Row(
-                  children: [
-                    IconButton(
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const HomePage()),
-                          );
-                        },
-                        icon: const Icon(
-                          Icons.home,
-                          color: Colors.black,
-                        )),
-                    IconButton(
-                      icon: const Icon(
-                        Icons.search,
-                        color: Colors.black,
-                      ),
-                      onPressed: () {
-                        showSearch(
-                            context: context, delegate: Search(countryData));
-                      },
-                    ),
-                  ],
-                )),
+                leading: CupertinoButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const HomePage()),
+                    );
+                  },
+                  child: const Icon(
+                    Icons.home_filled,
+                    color: Colors.black,
+                  ),
+                ),
+                trailing: CupertinoButton(
+                  alignment: Alignment.centerRight,
+                  onPressed: () {
+                    showSearch(context: context, delegate: Search(countryData));
+                  },
+                  child: const Icon(
+                    Icons.search,
+                    color: Colors.black,
+                  ),
+                ),
                 backgroundColor: Colors.white,
                 largeTitle: Text(
                   'COVIDTRACBOOK',
+                  style: GoogleFonts.pacifico(
+                    color: Colors.black,
+                    fontWeight: FontWeight.w200,
+                    fontSize: 18.0,
+                  ),
+                ),
+                middle: Text(
+                  'Covid19 WorldWide',
                   style: GoogleFonts.pacifico(
                     color: Colors.black,
                     fontWeight: FontWeight.w200,

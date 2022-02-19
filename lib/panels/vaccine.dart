@@ -57,37 +57,40 @@ class _VaccinePageState extends State<VaccinePage> {
           headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
             return <Widget>[
               CupertinoSliverNavigationBar(
-                leading: Material(
-                    child: Row(
-                  children: [
-                    IconButton(
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const HomePage()),
-                          );
-                        },
-                        icon: const Icon(
-                          Icons.home,
-                          color: Colors.black,
-                        )),
-                    IconButton(
-                      icon: const Icon(
-                        Icons.search,
-                        color: Colors.black,
-                      ),
-                      onPressed: () {
-                        showSearch(
-                            context: context,
-                            delegate: VaccineSearch(vaccineData));
-                      },
-                    ),
-                  ],
-                )),
+                leading: CupertinoButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const HomePage()),
+                    );
+                  },
+                  child: const Icon(
+                    Icons.home_filled,
+                    color: Colors.black,
+                  ),
+                ),
+                trailing: CupertinoButton(
+                  alignment: Alignment.centerRight,
+                  onPressed: () {
+                    showSearch(
+                        context: context, delegate: VaccineSearch(vaccineData));
+                  },
+                  child: const Icon(
+                    Icons.search,
+                    color: Colors.black,
+                  ),
+                ),
                 backgroundColor: Colors.white,
                 largeTitle: Text(
                   'COVIDTRACBOOK',
+                  style: GoogleFonts.pacifico(
+                    color: Colors.black,
+                    fontWeight: FontWeight.w200,
+                    fontSize: 18.0,
+                  ),
+                ),
+                middle: Text(
+                  'Covid19 Vaccines WorldWide',
                   style: GoogleFonts.pacifico(
                     color: Colors.black,
                     fontWeight: FontWeight.w200,

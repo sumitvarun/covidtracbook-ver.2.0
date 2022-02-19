@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -10,8 +11,8 @@ class Search extends SearchDelegate {
   @override
   List<Widget> buildActions(BuildContext context) {
     return [
-      IconButton(
-          icon: const Icon(Icons.clear),
+      CupertinoButton(
+          child: const Icon(Icons.clear),
           onPressed: () {
             query = '';
           })
@@ -20,11 +21,14 @@ class Search extends SearchDelegate {
 
   @override
   Widget buildLeading(BuildContext context) {
-    return IconButton(
-      icon: const Icon(Icons.arrow_back_ios),
+    return CupertinoButton(
       onPressed: () {
         Navigator.pop(context);
       },
+      child: const Icon(
+        Icons.arrow_back_ios,
+        color: Colors.black,
+      ),
     );
   }
 
