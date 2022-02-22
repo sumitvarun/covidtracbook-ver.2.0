@@ -22,7 +22,8 @@
 
   
 </div>-->
-![Samsung Galaxy Note 10 Presentation](https://user-images.githubusercontent.com/52107131/155170705-5fa8a1c7-93e8-4e08-8628-7376213d2c17.png)
+<!--![Samsung Galaxy Note 10 Presentation](https://user-images.githubusercontent.com/52107131/155170705-5fa8a1c7-93e8-4e08-8628-7376213d2c17.png)-->
+![Samsung Galaxy Note 10 Presentation (1)](https://user-images.githubusercontent.com/52107131/155171985-ea0a5dcd-d4de-436f-b67f-481c60e79974.png)
 
 
 ## License
