@@ -1,8 +1,8 @@
 # covidtracbook
 #### CovidTracBook is an opensource native application to track covid19 data. Comes With Simple & Clean UI.
 ![Covidtracbookvers 3 1 0 copy 3 (1)](https://user-images.githubusercontent.com/52107131/155395029-ce2c29ef-ee3c-446d-909c-00b4e5418022.png)
-![Covidtracbookvers 3 1 0 copy 3](https://user-images.githubusercontent.com/52107131/155395040-83c35836-582d-4d29-ba79-b94fc467c877.png)
-![Covidtracbookvers 3 1 0 copy 2](https://user-images.githubusercontent.com/52107131/155395044-5c9930b7-190b-4e07-8016-442fe574db9f.png)
+<!--![Covidtracbookvers 3 1 0 copy 3](https://user-images.githubusercontent.com/52107131/155395040-83c35836-582d-4d29-ba79-b94fc467c877.png)
+![Covidtracbookvers 3 1 0 copy 2](https://user-images.githubusercontent.com/52107131/155395044-5c9930b7-190b-4e07-8016-442fe574db9f.png)-->
 
 
 ## Features:
